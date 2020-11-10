@@ -77,7 +77,7 @@ experience. Remove each line if you want to re-activate the feature */
 .tooltip,                                         /* Tooltips */
 .pane-list-item-ending-flair:not(.tag-pane-tag-count), /* Search counts */
 .workspace-ribbon-collapse-btn {                  /* Sidebar collapse */
-  display:none !important;
+  /* display:none !important; */
 }
 
 /* Hides the name of the root folder */
@@ -88,7 +88,7 @@ experience. Remove each line if you want to re-activate the feature */
 /* Remove this if you re-enable status bar */
 .workspace-split.mod-left-split > .workspace-leaf-resize-handle,
 .workspace-split.mod-right-split > .workspace-leaf-resize-handle {
-  height:100%;
+  /* height:100%; */
 }
 
 
@@ -167,24 +167,24 @@ experience. Remove each line if you want to re-activate the feature */
 
 
 .theme-dark {
-  --background-primary:hsl(var(--base-h),var(--base-s),var(--base-d));
-  --background-primary-alt:hsl(var(--base-h),var(--base-s),calc(var(--base-d) - 3%));
-  --background-secondary:hsl(var(--base-h),var(--base-s),var(--base-d));
-  --background-secondary-alt:hsl(var(--base-h),var(--base-s),var(--base-d));
-  --background-tertiary:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 4%));
-  --background-modifier-border:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 5%));
-  --background-modifier-border-hover:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 10%));
-  --background-modifier-border-focus:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 20%));
+  --background-primary:#161822;
+  --background-primary-alt:#161822;
+  --background-secondary:#1e2132;
+  --background-secondary-alt:#1e2132;
+  --background-tertiary:#26293a;
+  --background-modifier-border:transparent;
+  --background-modifier-border-hover:transparent;
+  --background-modifier-border-focus:transparent;
   --background-modifier-box-shadow:rgba(0, 0, 0, 0.3);
-  --text-normal:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 67%));
-  --text-muted:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 45%));
-  --text-faint:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 20%));
-  --background-transparent:hsla(var(--base-h),var(--base-s),var(--base-d),0);
-  --background-translucent:hsla(var(--base-h),var(--base-s),var(--base-d),0.85);
+  --text-normal:#c6c8d1;
+  --text-muted:#6b7089;
+  --text-faint:#6b7089;
+  --background-transparent:transparent;
+  --background-translucent:transparent;
   --background-match-highlight:hsla(var(--accent-h), 40%, 62%, 0.2);
   --background-modifier-accent:hsl(var(--accent-h),var(--accent-s),calc(var(--accent-d) - 10%));
-  --text-accent:hsl(var(--accent-h),var(--accent-s),var(--accent-d));
-  --text-accent-hover:hsl(var(--accent-h),var(--accent-s),calc(var(--accent-d) + 10%));
+  --text-accent: #84a0c6;
+  --text-accent-hover:#84a0c6;
   --interactive-accent:hsl(var(--accent-h),var(--accent-s),var(--accent-d));
   --interactive-accent-hover:hsl(var(--accent-h),var(--accent-s),calc(var(--accent-d) + 10%));
   --quote-opening-modifier:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 10%));
@@ -192,6 +192,7 @@ experience. Remove each line if you want to re-activate the feature */
   --text-selection:hsla(var(--accent-h),70%,40%,30%);
   --text-highlight-bg:rgba(255, 177, 80, 0.3);
   --text-highlight-bg-active:rgba(255, 177, 80, 0.3);
+  --codeColor: #84a0c6;
 }
 .theme-light {
   --background-primary:hsl(var(--base-h),var(--base-s),var(--base-l));
@@ -1367,7 +1368,7 @@ input.search-input:focus {
   color:var(--text-normal);
 }
 .side-dock-collapsible-section-header-indicator {
-  display:none;
+  /* display:none; */
 }
 .side-dock-collapsible-section-header {
   padding-left:15px;
@@ -1631,7 +1632,7 @@ ol > li::before {
 .cm-s-obsidian.CodeMirror .HyperMD-hover > .HyperMD-hover-content code,
 .cm-s-obsidian .cm-formatting-hashtag,
 .cm-s-obsidian .cm-inline-code,
-.cm-s-obsidian .HyperMD-codeblock,
+.cm-s-obsidian pre.HyperMD-codeblock,
 .cm-s-obsidian .HyperMD-hr,
 .cm-s-obsidian .cm-hmd-frontmatter,
 .cm-s-obsidian .cm-hmd-orgmode-markup,
@@ -1642,6 +1643,7 @@ ol > li::before {
 .cm-s-obsidian .hmd-fold-html kbd
 .CodeMirror-code {
   font-family:var(--font-monospace);
+  color:var(--codeColor);
 }
 
 /* --------------- */
